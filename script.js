@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const message = document.querySelector('.message');
 
     // Set canvas dimensions
-    canvas.width = 250;
-    canvas.height = 300;
+    canvas.width = 300;
+    canvas.height = 400;
 
     
 
