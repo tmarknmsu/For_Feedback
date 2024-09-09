@@ -53,15 +53,18 @@ canvas {
     height: 100%;
 
 }
-.message {
-    position: absolute;
-    top: 50%;
+.psMessage {
+    position: fixed;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(37, 36, 36);
     font-size: 18px;
     text-align: center;
-    display: none;
+    display: block;
+    font-family: 'Dancing Script', cursive;
+    color:#e9d149;
+    font-size: 20px;
 }
 
 #scratchCanvas {
