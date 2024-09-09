@@ -65,6 +65,7 @@ canvas {
     font-family: 'Dancing Script', cursive;
     color:#e9d149;
     font-size: 20px;
+    font-weight: bold;
 }
 
 #scratchCanvas {
