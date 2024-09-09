@@ -1,26 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8f8f8;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-image: url('textured-paper.png'); /* Replace with your paper texture image */
+    background-size: cover;
+    background-position: center;
 }
+
+
 .container {
     text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color:#e9d149;
+    font-size: 70px;
+    
+    
 }
 .scratch-off {
     position: relative;
-    width: 80vw; /* Use viewport width for responsiveness */
+    width: 60vw; /* Use viewport width for responsiveness */
     height: 80vw; /* Maintain a square aspect ratio */
-    max-width: 400px; /* Limit maximum size */
+    max-width: 300px; /* Limit maximum size */
     max-height: 400px; /* Limit maximum size */
     margin: 20px auto;
     background-image: url('picture.png');
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    border-radius: 50%;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 150px;
+    background: linear-gradient( 45deg, #ffd700, #ffac00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 canvas {
@@ -31,7 +53,6 @@ canvas {
     height: 100%;
 
 }
-
 .message {
     position: absolute;
     top: 50%;
@@ -41,4 +62,10 @@ canvas {
     font-size: 18px;
     text-align: center;
     display: none;
+}
+
+#scratchCanvas {
+    border-radius: 0%; /* Makes the canvas an oval */
+    width: 100%; /* Ensure it scales with the container */
+    height: auto; /* Maintain aspect ratio */
 }

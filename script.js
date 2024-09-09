@@ -5,14 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set canvas dimensions
     canvas.width = 300;
-    canvas.height = 300;
+    canvas.height = 400;
+
+    
 
     // Draw initial cover
-    ctx.fillStyle = '#999';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // ctx.fillStyle = '#999';
+    // ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Draw the gold gradient onto the canvas
+        const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#ffd700'); // Light gold
+            gradient.addColorStop(0.5, '#ffac00'); // Mid gold
+            gradient.addColorStop(1, '#b8860b'); // Dark gold
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 
-
+            
     // Setup scratch effect
     let isScratching = false;
     const scratchRadius = 20;
@@ -44,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return scratchedPixels;
     }
+
+
 
     function startScratch(e) {
         isScratching = true;
