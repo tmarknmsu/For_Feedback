@@ -12,15 +12,17 @@ body {
 }
 .scratch-off {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 80vw; /* Use viewport width for responsiveness */
+    height: 80vw; /* Maintain a square aspect ratio */
+    max-width: 400px; /* Limit maximum size */
+    max-height: 400px; /* Limit maximum size */
     margin: 20px auto;
-    background-image: url('picture.png'); /* Set background image */
-    background-size: cover; /* Cover the container with the image */
-    background-position: center; /* Center the image */
-    overflow: hidden; /* Hide overflow so that only the scratched area is visible */
-
+    background-image: url('picture.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
+
 canvas {
     width: 100%;
     height: 100%;
