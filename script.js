@@ -45,13 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
         return scratchedPixels;
     }
 
-    canvas.addEventListener('mousedown', () => {
+    function startScratch(e) {
         isScratching = true;
-    });
+        scratch(e);
+    }
 
-    canvas.addEventListener('mouseup', () => {
+    function stopScratch() {
         isScratching = false;
-    });
+    }
 
+    // Add event listeners for mouse and touch events
+    canvas.addEventListener('mousedown', startScratch);
+    canvas.addEventListener('mouseup', stopScratch);
     canvas.addEventListener('mousemove', scratch);
+
+    canvas.addEventListener('touchstart', startScratch);
+    canvas.addEventListener('touchend', stopScratch);
+    canvas.addEventListener('touchmove', (e) => {
+        // Prevent default scrolling behavior
+        e.preventDefault();
+        scratch(e.touches[0]);
+});
 });
